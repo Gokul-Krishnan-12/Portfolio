@@ -1,0 +1,33 @@
+@use "./shared/" as *;
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.Loader__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.spinner {
+  animation-name: spin;
+  animation-duration: 500ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

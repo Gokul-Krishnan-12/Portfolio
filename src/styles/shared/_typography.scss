@@ -1,0 +1,57 @@
+@use "./mixins" as *;
+@use "./variables" as *;
+
+html,
+body {
+  font-family: $fontPrimary;
+
+  color: $colorPrimary;
+  font-weight: 400;
+  font-size: 16px;
+  font-feature-settings: "lnum";
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: $colorPrimary;
+  font-weight: 500;
+  word-wrap: break-word;
+  line-height: 1.3;
+  span {
+    font-weight: 100;
+    display: inline-block;
+  }
+  em {
+    display: block;
+    font-weight: 100;
+    @include font-size(18px);
+    font-style: italic;
+  }
+}
+
+h1 {
+  font-size: 40px;
+  @media #{$lg} {
+    font-size: 64px;
+  }
+}
+
+strong {
+  font-weight: 700;
+}
+
+p {
+  @include font-size(16px);
+  line-height: 1.7;
+}

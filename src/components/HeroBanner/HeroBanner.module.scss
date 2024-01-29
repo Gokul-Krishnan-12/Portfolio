@@ -1,0 +1,58 @@
+@use "src/styles/shared/mixins" as *;
+@use "src/styles/shared/variables" as *;
+
+.HeroBanner {
+  :global {
+    padding: 70px 0 0;
+    background: url(../../assets/images/blob.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 376px;
+
+    @media #{$lg} {
+      display: flex;
+      padding-top: 150px;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      height: calc(100vh - 105px);
+    }
+
+    span {
+      position: relative;
+
+      &::before {
+        content: "";
+        background: linear-gradient(
+          0deg,
+          rgb(65, 76, 198) 0%,
+          rgb(76, 155, 95) 100%
+        );
+        width: 1.5px;
+        height: 100%;
+        position: absolute;
+      }
+    }
+    p {
+      margin: 14.4px 0 14.4px 15px;
+      @media #{$lg} {
+        max-width: 85%;
+      }
+    }
+    .textContainer {
+      flex: 1;
+      @media #{$md} {
+        flex-basis: 50%;
+      }
+    }
+    figure {
+      text-align: end;
+      img {
+        width: 300px;
+        height: 300px;
+      }
+      @media #{$lg} {
+        margin-top: -50px;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+import styles from './{{pascalCase name}}.module.scss';
+
+
+
+const {{pascalCase name}} = (props) => {
+  const { className, variant } = props;
+  return (
+    <div className={`${styles.{{pascalCase name}} } ${styles[`{{pascalCase name}}__${variant}`]} ${className}`}>
+    </div>
+  );
+};
+
+export default {{pascalCase name}};

@@ -1,0 +1,13 @@
+@use "src/styles/shared/mixins" as *;
+@use "src/styles/shared/variables" as *;
+
+.SkillSection {
+  margin-top: 50px;
+  @media #{$lg} {
+    display: flex;
+    justify-content: center;
+  }
+  h2 {
+    align-self: center;
+  }
+}
