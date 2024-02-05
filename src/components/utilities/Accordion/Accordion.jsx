@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { memo, useEffect, useState } from "react";
 import styles from "./Accordion.module.scss";
 import Image from "next/image";
 import frontendImage from "@assets/images/frontend-image.jpg";
@@ -20,8 +20,18 @@ import wp from "@assets/icons/wordpress.svg";
 import mongodb from "@assets/icons/mongodb.svg";
 import php from "@assets/icons/php.svg";
 import laravel from "@assets/icons/laravel.svg";
+import figma from "@assets/icons/figma.svg";
+import filezilla from "@assets/icons/filezilla.svg";
+
+import useMountTransition from "helper/useMountTransition";
 
 const Accordion = (props) => {
+  const [activeCard, setActiveCard] = useState(1);
+
+  const handleClick = (index) => {
+    setActiveCard(index);
+  };
+
   const skills = {
     frontend: {
       title: "Frontend",
@@ -72,20 +82,21 @@ const Accordion = (props) => {
         `,
       coverImage: otherImage,
       images: [
-        { src: html, alt: "html" },
-        { src: css, alt: "css" },
+        { src: figma, alt: "figma" },
+        { src: filezilla, alt: "filezilla" },
       ],
     },
   };
-  const [activeCard, setActiveCard] = useState(1);
 
   const Card = ({ data, index }) => {
     const { title, icon, images, coverImage } = data;
     return (
       <div
-        className={`card ${index == activeCard ? "active" : ""}`}
+        className={`card ${index == activeCard && "active"}`}
         data-index={index}
-        onClick={() => setActiveCard(index)}
+        onClick={() => {
+          handleClick(index);
+        }}
       >
         <figure className="background">
           {index === activeCard ? (
@@ -134,12 +145,7 @@ const Accordion = (props) => {
     >
       <div className="container">
         {Object.values(skills).map((skill, index) => (
-          <Card
-            key={index}
-            data={skill}
-            index={index + 1}
-            isActive={activeCard === `${index + 1}`}
-          />
+          <Card key={index} data={skill} index={index + 1} />
         ))}
       </div>
     </div>

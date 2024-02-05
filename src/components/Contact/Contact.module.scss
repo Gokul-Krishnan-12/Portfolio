@@ -1,0 +1,94 @@
+@use "src/styles/shared/mixins" as *;
+@use "src/styles/shared/variables" as *;
+
+.Contact {
+  
+  padding: rem(30);
+  // @media #{$md} {
+  //   margin: rem(100) rem(275) rem(100);
+  
+  // }
+  scroll-snap-align: end;
+  // background-color: rgb(2, 31, 31);
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 0.1px solid rgba(75, 74, 74, 0.7);
+    h1 {
+      color: $white;
+      padding-bottom: 25%;
+      font-size: rem(40);
+     @media #{$lg} {
+      font-size: rem(70);
+      max-width: 50%;
+      padding-bottom: 15%;
+     }
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: rem(500);
+      position: absolute;
+      transform: translate(0, 450%);
+    }
+
+    .text {
+      font-weight: 500;
+      font-size: rem(20);
+      color: rgba(255, 255, 255, 0.7);
+      padding-bottom: rem(20);
+    }
+  }
+  .social-container {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    margin: rem(45) 0;
+  }
+  .btn {
+    z-index: 9;
+    background-color: $button-cyan;
+    font-family: Manrope;
+    cursor: pointer;
+    display: block;
+    
+    color: $text-black;
+    text-decoration: none;
+    white-space: normal;
+    text-align: left;
+    line-height: 43px;
+    letter-spacing: 0px;
+    font-weight: 500;
+    font-size: 20px;
+    border: 1px groove $text-black;
+    padding:5px 12px;
+    border-radius: 50px;
+    backdrop-filter: none;
+    filter: none;
+    transform-origin: 50% 50%;
+    opacity: 1;
+    transform: translate(0px, 0px);
+    visibility: visible;
+    margin-right: rem(30);
+    &:hover {
+      border: 1px groove rgb(0, 214, 214);
+      background-color: $bgColor;
+      color: $white;
+    }
+  }
+  .icons-social {
+    display: flex;
+    justify-content: space-evenly;
+ 
+    padding: rem(15) 0 0 rem(15);
+    border-left: 1px solid rgba(75, 74, 74, 0.7);
+    svg{
+      margin-right: 10px;
+      &:hover{
+        fill: $white;
+      }
+    }
+  }
+}
