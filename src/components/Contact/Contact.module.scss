@@ -4,12 +4,11 @@
 .Contact {
   
   padding: rem(30);
-  // @media #{$md} {
-  //   margin: rem(100) rem(275) rem(100);
+  @media #{$md} {
+    margin: rem(100) rem(0) rem(100);
   
-  // }
+  }
   scroll-snap-align: end;
-  // background-color: rgb(2, 31, 31);
 
   .text-container {
     display: flex;

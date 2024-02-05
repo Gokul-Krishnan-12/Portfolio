@@ -11,16 +11,29 @@
     @media #{$xsm} {
       background-size: 376px;
     }
-    @media #{$lg} {
+    @media #{$md} {
       display: flex;
       padding: 150px 40px 40px;
       flex-direction: row-reverse;
       justify-content: space-between;
-      // height: calc(100vh - 105px);
+      height: min(752px ,calc(100vh - 105px));
+    }
+    @media #{$md} {
+      background-position:  right;
+      background-size: 476px;
+
+    }
+    @media #{$xl} {
+    background-position: top right;
+      background-size: 576px;
     }
 
     span {
       position: relative;
+    @media #{$xl} {
+      display: block;
+      width: 80%;
+    }
 
       &::before {
         content: "";
@@ -42,15 +55,26 @@
     }
     .textContainer {
       flex: 1;
+      align-self: center;
       @media #{$md} {
         flex-basis: 50%;
       }
     }
+
     figure {
       text-align: end;
+      align-self: center;
       img {
         width: 300px;
         height: 325px;
+        @media #{$md} {
+          width: 400px;
+          height: 425px;
+        }
+        @media #{$xl} {
+          width: 500px;
+          height: 545px;
+        }
       }
       @media #{$lg} {
         margin-top: -50px;

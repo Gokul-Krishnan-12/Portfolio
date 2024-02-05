@@ -1,12 +1,27 @@
+'use client';
+import { useContext } from "react";
 import styles from "./Header.module.scss";
+import { MyContext } from "../../../app/context";
 
 const Header = (props) => {
   const { className, variant } = props;
+  const { isDarkMode, setIsDarkMode} = useContext(MyContext);
+
+  const handleToggleChange = () => {
+    // Toggle the value of isDarkMode
+    setIsDarkMode((prevMode) => !prevMode);
+  };
+
   return (
     <header className={`${styles.Header}`}>
       <nav>
         <div className="mainLogo">Gokul Krishnan</div>
         <ul>
+        <input type="checkbox" id="toggle"  checked={isDarkMode}
+            onChange={handleToggleChange}/>
+    <label id="switch" for="toggle">
+        <div id="circle"></div>
+        </label>
           <li>
             <svg
               version="1.0"

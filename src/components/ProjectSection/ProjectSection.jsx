@@ -33,7 +33,7 @@ const ProjectSection = (props) => {
     <div className={`${styles.ProjectSection} `}>
       <ul className="slider">
         {/* Render items based on the active index */}
-
+       
         <li
           className={`item`}
           style={{
@@ -52,6 +52,22 @@ const ProjectSection = (props) => {
             </Link>
           </div>
         </li>
+        <li
+          className={`item`}
+          style={{
+            backgroundImage: `url(${phone.src})`,
+          }}
+        >
+        <div className="content">
+          <h2 className="title">Projects</h2>
+          <p className="description">
+          Explore some of my projects below. Each project showcases my
+        skills and passion for creating innovative solutions. Click on each
+        project to learn more about the technologies used and the problems
+        solved.
+          </p>
+        </div>
+      </li>
         <li
           className={`item`}
           style={{

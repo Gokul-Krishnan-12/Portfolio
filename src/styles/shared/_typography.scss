@@ -43,7 +43,19 @@ h6,
 h1 {
   font-size: 40px;
   @media #{$lg} {
-    font-size: 64px;
+    font-size: 70px;
+  }
+}
+
+h2 {
+  font-size: 30px;
+ 
+}
+
+h3 {
+  font-size: 20px;
+  @media #{$lg} {
+    font-size: 28px;
   }
 }
 
@@ -52,6 +64,6 @@ strong {
 }
 
 p {
-  @include font-size(16px);
+  @include font-size(20px);
   line-height: 1.7;
 }

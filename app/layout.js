@@ -1,5 +1,7 @@
 import Header from "@components/Header";
 import "@styles/globals.scss";
+import ContextWrapper from "./contextWrapper";
+
 
 export const metadata = {
   title: "Gokul Krishnan",
@@ -7,12 +9,16 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+ 
   return (
     <html lang="en">
-      <body>
-        <Header />
-        {children}
-      </body>
+     
+      <ContextWrapper>
+     
+          {children}
+        
+        </ContextWrapper>
+     
     </html>
   );
 }
