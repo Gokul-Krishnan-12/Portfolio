@@ -55,8 +55,7 @@
     }
 
     .card > .background {
-      display: flex;
-      flex-wrap: wrap;
+      text-align: justify;
       position: absolute;
       inset: 0;
       transition: var(--transition-timing) ease;
@@ -71,9 +70,9 @@
       background: rgba(45, 45, 45, 0.7);
     }
     .card > .background .coverImage {
-      filter: brightness(0.5) grayscale(0.5);
+      filter: brightness(0.7) grayscale(0);
       &:hover {
-        filter: brightness(0.5) grayscale(0);
+        filter: brightness(1) grayscale(0);
       }
     }
     .card.active > .background .coverImage {
@@ -142,7 +141,7 @@
     .card-content > .title {
       white-space: pre;
       margin-left: 10px;
-
+      color: $white;
       opacity: 1;
       transition-delay: 0.3s;
       @media #{$lg} {

@@ -15,7 +15,6 @@
     span {
       display: block;
       text-transform: uppercase;
-      // font-family: $secondary;
       font-size: rem(18);
       font-weight: 400;
       letter-spacing: rem(3);
@@ -23,8 +22,8 @@
       &::before {
         content: "";
         width: 150px;
-        height: 1px;
-        background-color: #fff;
+        height: 2px;
+        background-color: $themeOrange;
         position: absolute;
         left: 1px;
         top: 50%;

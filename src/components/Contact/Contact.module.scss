@@ -15,13 +15,12 @@
     flex-direction: column;
     border-bottom: 0.1px solid rgba(75, 74, 74, 0.7);
     h1 {
-      color: $white;
       padding-bottom: 25%;
       font-size: rem(40);
      @media #{$lg} {
       font-size: rem(70);
       max-width: 50%;
-      padding-bottom: 15%;
+      padding-bottom: 6%;
      }
     }
     .content {
@@ -36,7 +35,6 @@
     .text {
       font-weight: 500;
       font-size: rem(20);
-      color: rgba(255, 255, 255, 0.7);
       padding-bottom: rem(20);
     }
   }
@@ -48,12 +46,11 @@
   }
   .btn {
     z-index: 9;
-    background-color: $button-cyan;
-    font-family: Manrope;
+    background-color: $themeOrange;
     cursor: pointer;
     display: block;
     
-    color: $text-black;
+    color: $white;
     text-decoration: none;
     white-space: normal;
     text-align: left;
@@ -61,7 +58,6 @@
     letter-spacing: 0px;
     font-weight: 500;
     font-size: 20px;
-    border: 1px groove $text-black;
     padding:5px 12px;
     border-radius: 50px;
     backdrop-filter: none;
@@ -72,7 +68,6 @@
     visibility: visible;
     margin-right: rem(30);
     &:hover {
-      border: 1px groove rgb(0, 214, 214);
       background-color: $bgColor;
       color: $white;
     }

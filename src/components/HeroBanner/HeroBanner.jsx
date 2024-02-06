@@ -33,7 +33,7 @@ const HeroBanner = (props) => {
             interactions.
           </p>
         </span>
-      <button>DOwnload Resume</button>
+         <button className="btn">Download Resume</button>
       </div>
     </div>
   );

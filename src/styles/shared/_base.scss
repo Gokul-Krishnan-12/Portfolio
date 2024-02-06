@@ -11,10 +11,27 @@ body {
   max-width: 1620px;
   background-color: $bgColor;
   margin: 0 auto;
+  
   &.light-mode {
     background-color: $lightBgColor;
     color: $bgColor;
-  }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6{
+      color: $text-black;
+    }
+      .card.active >.background{
+        background: transparent;
+        border: 1px solid $themeOrange;
+      };
+      .mainLogo{
+        color: $white;
+      }
+     
+      }
 }
 
 
