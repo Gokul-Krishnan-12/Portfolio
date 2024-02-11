@@ -2,10 +2,9 @@
 @use "src/styles/shared/variables" as *;
 
 .SkillSection {
-  margin: 50px 0;
   padding: 20px;
   height: 700px;
-  @media #{$lg} {
+  @media #{$xxl} {
     display: flex;
     justify-content: center;
     padding: 40px 40px;

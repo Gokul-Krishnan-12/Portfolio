@@ -1,6 +1,5 @@
-import Header from "@components/Header";
 import "@styles/globals.scss";
-import ContextWrapper from "./contextWrapper";
+import ClientWrapper from "./ClientWrapper";
 
 
 export const metadata = {
@@ -12,13 +11,13 @@ export default function RootLayout({ children }) {
  
   return (
     <html lang="en">
+      <body>
      
-      <ContextWrapper>
-     
+        <ClientWrapper>
           {children}
-        
-        </ContextWrapper>
-     
+        </ClientWrapper>
+         
+      </body>
     </html>
   );
 }

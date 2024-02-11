@@ -3,7 +3,7 @@
 
 .SideText {
   display: none;
-  @media #{$md}{
+  @media #{$xxl}{
     display: block;
   }
   z-index: 99;

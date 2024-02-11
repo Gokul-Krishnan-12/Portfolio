@@ -30,7 +30,7 @@ const ProjectSection = (props) => {
   }, []);
 
   return (
-    <div className={`${styles.ProjectSection} `}>
+    <div className={`${styles.ProjectSection} container `}>
       <ul className="slider">
         {/* Render items based on the active index */}
        

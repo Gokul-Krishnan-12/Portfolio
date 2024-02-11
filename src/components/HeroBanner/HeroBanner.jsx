@@ -5,7 +5,7 @@ import profileImage from "@assets/images/gogu-image.png";
 const HeroBanner = (props) => {
   const { className, variant } = props;
   return (
-    <div className={`${styles.HeroBanner} `}>
+    <div className={`${styles.HeroBanner} container `}>
       <figure>
         <Image
           src={profileImage}

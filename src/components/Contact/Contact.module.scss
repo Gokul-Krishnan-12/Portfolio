@@ -1,13 +1,10 @@
 @use "src/styles/shared/mixins" as *;
 @use "src/styles/shared/variables" as *;
 
+
 .Contact {
   
   padding: rem(30);
-  @media #{$md} {
-    margin: rem(100) rem(0) rem(100);
-  
-  }
   scroll-snap-align: end;
 
   .text-container {
@@ -21,6 +18,7 @@
       font-size: rem(70);
       max-width: 50%;
       padding-bottom: 6%;
+      margin: 60px 0;
      }
     }
     .content {
@@ -43,6 +41,11 @@
     display: flex;
     justify-content: start;
     margin: rem(45) 0;
+    flex-direction: column;
+    @media #{$md} {
+    flex-direction: row;
+      
+    }
   }
   .btn {
     z-index: 9;
@@ -67,6 +70,7 @@
     transform: translate(0px, 0px);
     visibility: visible;
     margin-right: rem(30);
+    width: fit-content;
     &:hover {
       background-color: $bgColor;
       color: $white;
@@ -74,15 +78,27 @@
   }
   .icons-social {
     display: flex;
-    justify-content: space-evenly;
- 
-    padding: rem(15) 0 0 rem(15);
-    border-left: 1px solid rgba(75, 74, 74, 0.7);
-    svg{
-      margin-right: 10px;
-      &:hover{
-        fill: $white;
-      }
+   margin-top: 10px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap:20px;
+
+   
+    img{
+     
+      cursor: pointer;
+     
     }
+    @media #{$md} {
+      margin-top: 0;
+      justify-content: space-evenly;
+      margin-right: 50px ;
+      padding: 0 0 0 rem(15);
+      align-items: center;
+    border-left: 1px solid rgba(75, 74, 74, 0.7);
+   
+
+      }
+
   }
 }

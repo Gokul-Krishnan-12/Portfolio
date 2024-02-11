@@ -5,9 +5,7 @@ const SkillSection = (props) => {
   const { className, variant } = props;
   return (
     <div
-      className={`${styles.SkillSection} ${
-        styles[`SkillSection__${variant}`]
-      } ${className}`}
+      className={`${styles.SkillSection} container`}
     >
       <h2>TECHNOLOGIES I'VE WORKED WITH</h2>
       <Accordion />
