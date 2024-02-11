@@ -7,6 +7,7 @@
   overflow: hidden;
   position: relative;
   margin-top: 100px;
+  background-color: $bgColor;
   @media #{$lg} {
     height: 100vh;
   }
@@ -46,13 +47,13 @@
       }
 
       &:nth-child(3) {
-        left: calc(50% + 220px);
+        left: calc(85%);
       }
       &:nth-child(4) {
-        left: calc(50% + 440px);
+        left: calc(90% + 440px);
       }
       &:nth-child(5) {
-        left: calc(50% + 660px);
+        left: calc(90% + 660px);
       }
       &:nth-child(6) {
         opacity: 0;

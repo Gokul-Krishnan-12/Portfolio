@@ -57,33 +57,26 @@ const ProjectSection = (props) => {
           style={{
             backgroundImage: `url(${phone.src})`,
           }}
+        
         >
         <div className="content">
           <h2 className="title">Projects</h2>
           <p className="description">
-          Explore some of my projects below. Each project showcases my
-        skills and passion for creating innovative solutions. Click on each
-        project to learn more about the technologies used and the problems
-        solved.
+          Explore some of my projects. Each project showcases my
+        skills and passion for creating innovative solutions.
           </p>
         </div>
       </li>
         <li
           className={`item`}
           style={{
-            backgroundImage: `url(${pet.src})`,
+            backgroundImage: `url(${phone.src})`,
           }}
         >
           <div className="content">
             <h2 className="title">Screen Pet</h2>
             <p className="description">
               An interactive screen pet using Python and the tkinter library.
-              This virtual companion responds dynamically to both text input and
-              cursor actions. The tkinter library facilitates the creation of a
-              visually appealing and responsive environment, allowing the screen
-              pet to engage with users through input interactions and respond to
-              cursor movements, providing an engaging and interactive user
-              experience.
             </p>
             <Link href="#" title="Github link">
               Go to Github
@@ -92,14 +85,15 @@ const ProjectSection = (props) => {
         </li>
         <li
           className={`item`}
+         
           style={{
-            backgroundImage: `url(${calculator.src})`,
+            backgroundImage: `url(${phone.src})`,
           }}
         >
           <div className="content">
             <h2 className="title">Video Popup : Chrome Extension</h2>
             <p className="description">
-              A Chrome extension designed as a popup video player allows users
+              An extension designed as a popup video player allows users
               to stream videos directly from websites without the need to open
               them in a separate tab or window.
             </p>
@@ -111,8 +105,9 @@ const ProjectSection = (props) => {
 
         <li
           className={`item`}
+          
           style={{
-            backgroundImage: `url(${calculator.src})`,
+            backgroundImage: `url(${phone.src})`,
           }}
         >
           <div className="content">
