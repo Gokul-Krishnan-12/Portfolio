@@ -13,9 +13,9 @@
       font-size: 20px;
       display: flex;
       justify-content: space-between;
-      padding: 20px;
+      padding: 15px;
       @media #{$md} {
-        padding: 40px 40px;
+        padding: 30px 40px;
       }
       &::before {
         position: absolute;
@@ -37,11 +37,7 @@
       &::after {
         content: "";
         position: absolute;
-        background: linear-gradient(
-          0deg,
-          rgb(65, 76, 198) 0%,
-          rgb(76, 155, 95) 100%
-        );
+        background: $themeOrange;
         width: 0;
         height: 2px;
         bottom: 0;

@@ -6,11 +6,10 @@
     padding: 70px 20px 0;
     background: url(../../assets/images/blob.svg);
     background-repeat: no-repeat;
-    background-position: top right;
-    background-size: 360px;
-    @media #{$xsm} {
-      background-size: 376px;
-    }
+    background-position: top ;
+    background-size: 400px;
+    transition: background-size 1s ease;
+   
     @media #{$md} {
       display: flex;
       padding: 150px 40px 40px;
@@ -20,12 +19,12 @@
     }
     @media #{$md} {
       background-position:  right;
-      background-size: 476px;
+      background-size: 576px;
 
     }
     @media #{$xl} {
     background-position: top right;
-      background-size: 576px;
+      background-size: 676px;
     }
 
     span {
@@ -83,6 +82,7 @@
       transform: translate(0px, 0px);
       visibility: visible;
       margin-right: rem(30);
+      border: none;
       &:hover {
         background-color: $bgColor;
         color: $white;
@@ -107,6 +107,22 @@
       @media #{$lg} {
         margin-top: -50px;
       }
+    }
+
+  }
+  &--loaded{
+    background-size: 360px;
+    @media #{$xsm} {
+      background-size: 376px;
+    }
+    @media #{$md} {
+     
+      background-size: 476px;
+
+    }
+    @media #{$xl} {
+   
+      background-size: 576px;
     }
   }
 }

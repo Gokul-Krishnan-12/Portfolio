@@ -7,6 +7,7 @@ import SkillSection from "@components/SkillSection";
 export default function Home() {
   return (
     <main>
+     
       <SideText/>
       <HeroBanner />
       <SkillSection />

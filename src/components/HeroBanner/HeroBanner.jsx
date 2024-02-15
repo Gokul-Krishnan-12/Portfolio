@@ -1,11 +1,18 @@
+'use client';
 import Image from "next/image";
 import styles from "./HeroBanner.module.scss";
 import profileImage from "@assets/images/gogu-image.png";
+import { useEffect, useState } from "react";
 
 const HeroBanner = (props) => {
   const { className, variant } = props;
+  const [loaded,setLoaded]=useState(false);
+  useEffect(()=>{
+    setLoaded(true)
+  },[]);
+
   return (
-    <div className={`${styles.HeroBanner} container `}>
+    <div className={`${styles.HeroBanner} ${loaded?styles['HeroBanner--loaded']:''} container `}>
       <figure>
         <Image
           src={profileImage}
@@ -17,10 +24,10 @@ const HeroBanner = (props) => {
       </figure>
 
       <div className="textContainer">
-        <h1>Welcome.</h1>
+        <h1>Gokul Krishnan</h1>
         <span>
           <p>
-            My name is Gokul Krishnan, and I am a front-end developer based in
+            Also known as <b>Goku</b>,I am a front-end developer based in
             Kochi, Kerala, India. With a strong background in crafting various
             front-end solutions, I have experience in developing diverse
             applications.
